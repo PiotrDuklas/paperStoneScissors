@@ -1,14 +1,14 @@
 const game = {
     playerHand: "",
     computerHand: "",
-}
+};
 
 const summary = {
     numbers: 0,
     wins: 0,
     losses: 0,
     draws: 0,
-}
+};
 
 const hands = [...document.querySelectorAll(".choice img")]; //operator rest ... zamienia nodeList na tablicę
 let choiceImage = document.getElementById("choice");
@@ -86,4 +86,4 @@ startGame = () => {
     setTimeout(endGame, 1500);
 }
 hands.forEach(hand => hand.addEventListener("click", handChoice));
-document.querySelector(".start").addEventListener("click", startGame)
+document.querySelector(".start").addEventListener("click", startGame);
