@@ -10,7 +10,7 @@ const summary = {
     draws: 0,
 };
 
-const hands = [...document.querySelectorAll(".choice img")]; //operator rest ... zamienia nodeList na tablicę
+const hands = [...document.querySelectorAll(".choice img")]; 
 let choiceImage = document.getElementById("choice");
 let choiceImageC = document.getElementById("choiceC");
 
@@ -77,12 +77,9 @@ startGame = () => {
     if (!game.playerHand) {
         return alert("Wybierz rękę");
     }
-    // console.log(game.playerHand);
     game.computerHand = computerChoice();
-    // console.log(game.computerHand);
     const gameResult = checkResult(game.playerHand, game.computerHand);
     showResult(game.playerHand, game.computerHand, gameResult);
-    // console.log(gameResult);
     setTimeout(endGame, 1500);
 }
 hands.forEach(hand => hand.addEventListener("click", handChoice));
